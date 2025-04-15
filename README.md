@@ -4,11 +4,11 @@
 
 A small personal project to simulate simple trading strategies like *mean reversion*, with a high-frequency trading (HFT) twist.
 
-## 💡 Goal
+## Goal
 
 Improve C++ and math skills, understand the foundations of a basic backtest engine, and structure a small trading simulation project.
 
-## 📁 Project Structure
+## Project Structure
 
 - `src/` → C++ source files
 - `include/` → C++ headers
@@ -18,12 +18,12 @@ Improve C++ and math skills, understand the foundations of a basic backtest engi
 - `Makefile` → Build file (`make && ./sim`)
 - `main.cpp` → Entry point of the simulation
 
-## 🤖 Strategies Implemented
+## Strategies Implemented
 
 - **Basic Scalping Bot**: enters when spread is low, sells at next tick
 - **Mean Reversion Bot (MRB)**: entry on price returning toward moving average ± 2σ, exit via take profit or trailing stop
 
-## 🕹️ Modes
+## Modes
 
 - `offline`: generates the full simulation in one run (faster for plotting/testing)
 - `live`: simulates a tick every 10ms to mimic real-time market data (slower)
@@ -36,7 +36,7 @@ Example usage:
 
 Fixing the seed at `42` guarantees consistent market behavior between runs.
 
-## 📊 Visualization
+## Visualization
 
 After simulation ends, `plot_results.py` auto-launches, plotting:
 
@@ -48,7 +48,7 @@ After simulation ends, `plot_results.py` auto-launches, plotting:
 
 ---
 
-## 🧠 Mathematical Foundations
+## Mathematical Foundations
 
 The core price simulation relies on a **Geometric Brownian Motion (GBM)**, a stochastic model widely used in financial modeling.  
 Its continuous form is:
@@ -61,7 +61,7 @@ Where:
 - σ: volatility
 - W_t: standard Brownian motion (Wiener process)
 
-### 🧮 Numerical Simulation (Discrete GBM)
+### Numerical Simulation (Discrete GBM)
 
 To simulate step-by-step, we use the discretized version:
 
@@ -75,7 +75,7 @@ This ensures S_t > 0 and models both the drift and randomness of market behavior
 
 More info: [Wikipedia: Geometric Brownian Motion](https://en.wikipedia.org/wiki/Geometric_Brownian_motion)
 
-### 📈 Statistics Used
+### Statistics Used
 
 Used for calculating the rolling average and volatility (σ):
 

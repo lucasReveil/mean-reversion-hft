@@ -2,7 +2,7 @@
 
 Petit projet perso pour simuler des stratégies de trading ultra simples type *mean reversion*, en mode HFT (ou presque).
 
-## 💡 Objectif
+## Objectif
 
 perfectionner mon niveau en c++ (et en math), comprendre un peu les bases d’un engine de backtest maison, et structurer proprement un mini projet de trading.
 

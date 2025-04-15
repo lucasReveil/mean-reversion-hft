@@ -2,13 +2,13 @@
 
 Un pequeño proyecto personal para simular estrategias de trading sencillas tipo *mean reversion*, con un enfoque tipo HFT (High Frequency Trading)... o al menos aproximado.
 
-## 🎯 Objetivo
+## Objetivo
 
 Mejorar mis habilidades en C++ (y matemáticas), entender cómo se puede construir un motor de backtesting básico desde cero, y estructurar un mini proyecto de trading de forma clara y modular.
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 - `src/` → código fuente C++
 - `include/` → headers (.h)
@@ -20,7 +20,7 @@ Mejorar mis habilidades en C++ (y matemáticas), entender cómo se puede constru
 
 ---
 
-## ⚙️ Estrategias Implementadas
+## Estrategias Implementadas
 
 - **Scalping básico**  
   Entra cuando el spread es pequeño, vende en el siguiente tick.
@@ -30,7 +30,7 @@ Mejorar mis habilidades en C++ (y matemáticas), entender cómo se puede constru
 
 ---
 
-## 🔁 Modos de Ejecución
+## Modos de Ejecución
 
 - `offline` → genera todo el mercado de una vez para análisis rápido.
 - `live` → simula un mercado en tiempo real, tick cada 10ms.
@@ -43,7 +43,7 @@ Usa una semilla fija `42` para reproducir exactamente el mismo mercado.
 
 ---
 
-## 📈 Visualización
+## Visualización
 
 Una vez finalizada la simulación, el script `plot_results.py` se ejecuta automáticamente y genera:
 
@@ -54,7 +54,7 @@ Una vez finalizada la simulación, el script `plot_results.py` se ejecuta autom�
 
 ---
 
-## 🧠 Fundamentos Matemáticos
+## Fundamentos Matemáticos
 
 Este simulador usa un **Movimiento Browniano Geométrico (GBM)** para modelar el precio del activo financiero:
 
@@ -76,7 +76,7 @@ Donde:
 
 ---
 
-## 📊 Estadísticas
+## Estadísticas
 
 ### Media móvil:
     μ = (1 / n) × Σ x_i
@@ -88,4 +88,4 @@ Usado para calcular las **bandas de Bollinger** (μ ± 2σ) y activar señales d
 
 ---
 
-Gracias por leer 🙏 ¡Disfruta probando el código!
+Gracias por leer ¡Disfruta probando el código!
