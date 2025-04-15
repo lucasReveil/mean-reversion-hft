@@ -1,0 +1,21 @@
+# Build
+build/
+*.out
+*.o
+*.obj
+*.exe
+
+# OS files
+.DS_Store
+
+# Logs and temp
+*.log
+*.csv
+data/*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/

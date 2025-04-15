@@ -47,7 +47,7 @@ int main(int argc,char* argv[]) {
         std::default_random_engine rng(seed);  // fixe le seed pour generer toujours le meme marcher pour les tests
         std::normal_distribution<double> priceMove(0.0, 0.02); // marche aléatoire
         std::uniform_real_distribution<double> spreadNoise(0.03, 0.07); // léger bruit sur le spread
-        GBMSimulator sim(100.0, 0.05, 0.3, 1.0/252,seed);
+        GBMSimulator sim(100.0, 0.05, 0.3, 1.0/252.0,seed);
         double price = sim.nextPrice();
         PriceLogger priceLogger("data/market.csv");
         int tickCount=0;
