@@ -1,10 +1,9 @@
 # Build
-build/
 *.out
 *.o
 *.obj
 *.exe
-
+sim
 # OS files
 .DS_Store
 
