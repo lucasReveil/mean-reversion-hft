@@ -2,7 +2,7 @@
 #include "Tick.h"
 
 class OrderBook {
-public:
+   public:
     Tick currentTick;
     OrderBook(double initialPrice, double initialSpread);
     void update(double midPrice, double spread);

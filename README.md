@@ -1,5 +1,6 @@
 > [Version française ici ](README_fr.md)
-> [Versión castellano acá ](Readme_es.md)
+>
+> [Versión castellano acá ](README_es.md)
 # Mean Reversion Trading Simulator
 
 A small personal project to simulate simple trading strategies like *mean reversion*, with a high-frequency trading (HFT) twist.

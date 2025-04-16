@@ -3,13 +3,13 @@
 #include <string>
 
 class PriceLogger {
-private:
+   private:
     std::ofstream file;
 
-public:
+   public:
     PriceLogger(const std::string& filename) {
         file.open(filename);
-        file << "time,price\n"; // header CSV
+        file << "time,price\n";  // header CSV
     }
 
     void log(double time, double price) {
