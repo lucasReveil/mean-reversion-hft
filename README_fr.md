@@ -24,14 +24,25 @@ perfectionner mon niveau en c++ (et en math), comprendre un peu les bases d’un
 
 ## Modes
 
-- `offline` : génère tout en une passe (plus rapide pour les tests/plots)
-- `live` : tick toutes les 10ms, comme un vrai flux de marché (plus lent)
+Lancer le simulateur avec différentes options :
 
-Exemple :
-```
-./sim offline 42
-```
-Seed fixé à `42` pour générer un marché identique entre les runs.
+    ./sim [-s SEED] [-t TICKS]
+
+Options :
+- -s : (optionnel) Seed utilisée pour le générateur aléatoire
+       → permet de générer un marché identique entre les runs
+       Exemple : -s 42
+
+- -t : (optionnel) Nombre de ticks à simuler  
+         - Si `-t` est positif ou absent → mode offline (défaut : 10 000 ticks)  
+         - Si `-t` est négatif → mode live (un tick toutes les 10ms)
+
+Exemples :
+    ./sim -s 42 -t 10000
+    → Simule 10 000 ticks avec la seed 42 (mode offline)
+
+    ./sim -t -1
+    → Mode live
 
 ## Visualisation
 
