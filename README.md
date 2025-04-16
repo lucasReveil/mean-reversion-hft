@@ -36,9 +36,8 @@ Options:
        Example: -s 42
 
 - -t : (optional) Number of ticks to simulate
-       - If -t is positive → offline mode
+       - If -t is positive or absent → offline mode (default 10,000 ticks)
        - If -t is negative → live mode (ticks every 10ms)
-       - If absent → offline mode with 10,000 by default
 
 Examples:
     ./sim -s 42 -t 10000
