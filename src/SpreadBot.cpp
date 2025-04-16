@@ -27,9 +27,11 @@ void SpreadBot::maybeTrade(const Tick& currentTick, std::default_random_engine& 
     }
     if (!inPosition && currentTick.spread < Config::SPREAD_THRESHOLD) {
         bool filled = fillChance(rng);
+        if(filled){
         entryPrice = currentTick.bid;
         inPosition = true;
         entryTime = currentTick.timestamp;
+        }
     }
 }
 

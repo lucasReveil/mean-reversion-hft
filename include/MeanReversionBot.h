@@ -10,7 +10,6 @@ class MeanReversionBot {
    public:
     int window = Config::MEAN_REVERSION_WINDOW;
     PositionState inPosition = PositionState::OUT;
-    bool waitingToSell = false;
     double entryPrice = 0.0;
     double entryTime;
     double PnL = 0.0;

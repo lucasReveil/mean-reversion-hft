@@ -22,8 +22,8 @@ int main(int argc, char* argv[]) {
         std::cout << "Usage:\n";
         std::cout << "./sim -s [seed] -t [ticks]\n";
 
-        std::cout << "  seed: entier pour fixer le marché (optionnel)\n";
-        std::cout << "  ticks: nombre de ticks, 0 ou négatifs pour mode live (10 000 défaut)\n";
+        std::cout << "  seed: (optional) Seed for the random generator ensures the same market is generated each run (if fixed) Example: -s 42 \n";
+        std::cout << "  ticks: (optional) Number of ticks to simulate, negative for live mode. Example: -t 10000\n";
         return 0;
     }
     int opt;
@@ -55,9 +55,6 @@ int main(int argc, char* argv[]) {
         spreadBot.setLogger(&tradeLoggerSpread);
         mrb.setLogger(&tradeLoggerMRB);
 
-        if (argc > 2) {
-            seed = atoi(argv[2]);
-        }
         std::default_random_engine rng(seed);
         std::uniform_real_distribution<double> spreadNoise(0.03,
                                                            0.07);  // léger bruit sur le spread
@@ -84,7 +81,7 @@ int main(int argc, char* argv[]) {
             }
         } else {
             // version offline rapide ou on genere le marché direct pour plot apres
-            for (int tick = 0; tick < 10000; tick++) {
+            for (int tick = 0; tick < nbTicks; tick++) {
                 double price = sim.nextPrice();
                 spread = spreadNoise(rng);
                 orderBook.update(price, spread);
@@ -97,7 +94,7 @@ int main(int argc, char* argv[]) {
         }
     }
     {
-        std::cout << "Simulation terminée. Génération du graphique..." << std::endl;
+        std::cout << "Simulation over. Graphics generating..." << std::endl;
         std::system("python3 scripts/plot_results.py");
     }
     return 0;
