@@ -26,16 +26,26 @@ Improve C++ and math skills, understand the foundations of a basic backtest engi
 
 ## Modes
 
-- `offline`: generates the full simulation in one run (faster for plotting/testing)
-- `live`: simulates a tick every 10ms to mimic real-time market data (slower)
+Run the simulator with different options:
 
-Example usage:
+    ./sim [-s SEED] [-t TICKS]
 
-```
-./sim offline 42
-```
+Options:
+- -s : (optional) Seed for the random generator
+       → ensures the same market is generated each run (if fixed)
+       Example: -s 42
 
-Fixing the seed at `42` guarantees consistent market behavior between runs.
+- -t : (optional) Number of ticks to simulate
+       - If -t is positive → offline mode
+       - If -t is negative → live mode (ticks every 10ms)
+       - If absent → offline mode with 10,000 by default
+
+Examples:
+    ./sim -s 42 -t 10000
+    → Simulates 10,000 ticks with seed 42 (offline mode)
+
+    ./sim -t -1
+    → Live mode
 
 ## Visualization
 
