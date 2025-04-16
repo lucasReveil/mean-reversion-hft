@@ -35,9 +35,9 @@ Options:
        → ensures the same market is generated each run (if fixed)
        Example: -s 42
 
-- -t : (optional) Number of ticks to simulate
-       - If -t is positive or absent → offline mode (default 10,000 ticks)
-       - If -t is negative → live mode (ticks every 10ms)
+- -t : (optional) Number of ticks to simulate  
+         - If `-t` is positive or absent → offline mode (default: 10,000 ticks)  
+         - If `-t` is negative → live mode (ticks every 10ms)
 
 Examples:
     ./sim -s 42 -t 10000
