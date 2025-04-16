@@ -32,14 +32,25 @@ Mejorar mis habilidades en C++ (y matemáticas), entender cómo se puede constru
 
 ## Modos de Ejecución
 
-- `offline` → genera todo el mercado de una vez para análisis rápido.
-- `live` → simula un mercado en tiempo real, tick cada 10ms.
+Ejecutar el simulador con diferentes opciones:
 
-Ejemplo:
-```
-./sim offline 42
-```
-Usa una semilla fija `42` para reproducir exactamente el mismo mercado.
+    ./sim [-s SEED] [-t TICKS]
+
+Opciones:
+- -s : (opcional) Semilla para el generador aleatorio
+       → permite generar el mismo mercado cada vez (si se fija)
+       Ejemplo: -s 42
+
+- -t : (opcional) Número de ticks a simular  
+         - Si `-t` es positivo o no se indica → modo offline (por defecto: 10.000 ticks)  
+         - Si `-t` es negativo → modo live (un tick cada 10ms)
+
+Ejemplos:
+    ./sim -s 42 -t 10000
+    → Simula 10,000 ticks con seed 42 (modo offline)
+
+    ./sim -t -1
+    → Modo live 
 
 ---
 
