@@ -4,7 +4,7 @@
 # Mean Reversion Trading Simulator
 
 A small personal project to simulate simple trading strategies like *mean reversion*, with a high-frequency trading (HFT) twist.
-
+This repository served as an introduction to backtesting and strategy simulation. A more advanced and structured version is available [here](https://github.com/lucasReveil/backtest-engine)
 ## Goal
 
 Improve C++ and math skills, understand the foundations of a basic backtest engine, and structure a small trading simulation project.
